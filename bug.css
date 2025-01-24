@@ -1,0 +1,15 @@
+The following CSS code snippet demonstrates an uncommon issue related to the `calc()` function and percentage values within a `flex` context:
+
+```css
+.container {
+display: flex;
+width: 100%;
+}
+
+.item {
+width: calc(50% - 10px);
+background-color: lightblue;
+}
+```
+
+The expected behavior is that two `.item` elements within the `.container` would each occupy 45% of the available space (50% minus 10px margin), leaving a 10px gap between them.  However, this calculation may not always be accurate due to rounding errors and how `calc()` interacts with percentage units within a flexible layout.
