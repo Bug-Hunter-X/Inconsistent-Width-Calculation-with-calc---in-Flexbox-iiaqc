@@ -1,0 +1,16 @@
+A more reliable approach is to avoid `calc()` with percentages directly and instead handle the width adjustments with a different strategy.  For example, using the `gap` property on the flex container is often a cleaner and more predictable solution:
+
+```css
+.container {
+display: flex;
+width: 100%;
+gap: 10px;
+}
+
+.item {
+width: 50%;
+background-color: lightblue;
+}
+```
+
+This method eliminates the need for `calc()` and ensures the 10px gap between items is consistently maintained.  Alternatively, you could use grid layout which offers more precise control over spacing.
